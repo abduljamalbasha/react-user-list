@@ -29,7 +29,7 @@ export const User: React.FC = () => {
             {/* Display userList in accordion */}
             <Accordion defaultActiveKey="0" className="accordion-wrapper">
             {users && users.map((user) => {
-                    if (search == "" || user.name.toLowerCase().includes(search.toLowerCase())) {
+                    if (search == "" || user.name.toLowerCase().includes(search.toLowerCase()) || user.email.toLowerCase().includes(search.toLowerCase())) {
                         return (
                             <Accordion.Item eventKey={`"${user?.id}"`}>
                             <Accordion.Header>{user.name}  <span className="title"> - @{user.username} </span></Accordion.Header>
